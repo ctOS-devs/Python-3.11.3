@@ -4,6 +4,7 @@
 3. Конфигурировать сборку: `./configure LDFLAGS="-static -static-libgcc" CPPFLAGS="-fPIC -static" --disable-shared --prefix=$(pwd)/INSTALLED/ --enable-optimizations`
 4. Собрать в 8 потоков: `make -j 8`
 5. Установить: `make install -j 8`
+6. УДАЛИТЬ ГОВНО: `rm -rf INSTALLED/lib/python3.11/test`
 
 ## Успешно собранные библиотеки:
 ```

@@ -1,9 +1,9 @@
 # Инструкция по сборке
 1. Отредактировать `Modules/Setup` для доп.сборки (в репо уже настроено +-)
 2. Создать папку: `mkdir INSTALLED`
-3. Конфигурировать сборку: `./configure LDFLAGS="-static -static-libgcc" CPPFLAGS="-fPIC -static" --disable-shared --prefix=$(pwd)/INSTALLED/ --enable-optimizations`
+3. Конфигурировать сборку: `./configure LDFLAGS="-static -static-libgcc" CPPFLAGS="-fPIC -static" --disable-shared --prefix="/"`
 4. Собрать в 8 потоков: `make -j 8`
-5. Установить: `make install -j 8`
+5. Установить: `make install -j 8 DESTDIR=$(pwd)/INSTALLED`
 6. УДАЛИТЬ ГОВНО: `rm -rf INSTALLED/lib/python3.11/test`
 
 ## Успешно собранные библиотеки:
